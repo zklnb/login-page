@@ -6,13 +6,16 @@ function login() {
 
   // Kiểm tra tên đăng nhập và mật khẩu đúng không
   if (username === "zklnb" && password === "1234") {
-    // ✅ Nếu đúng -> chuyển đến trang chính nằm trong thư mục /home/
-   window.location.href = "https://zklnb.github.io/xzklnb/";
+    // ✅ Nếu đúng -> lưu trạng thái đăng nhập
+    localStorage.setItem("loggedIn", "true");
+
+    // ✅ Chuyển đến trang chính đúng theo đường dẫn GitHub Pages
+    window.location.href = "/xzklnb/home/index.html";
   } else {
     // ❌ Nếu sai -> hiển thị thông báo lỗi
     alert("Sai tài khoản hoặc mật khẩu!");
   }
 
-  // Trả về false để không reload lại trang khi submit form
+  // Ngăn form reload lại trang khi submit
   return false;
 }
