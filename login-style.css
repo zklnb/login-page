@@ -1,56 +1,63 @@
-/* Áp dụng cho tất cả phần tử trong trang */
+/* ----- RESET CƠ BẢN CHO TOÀN TRANG ----- */
 * {
-  margin: 0;                /* Bỏ khoảng trắng mặc định ngoài */
-  padding: 0;               /* Bỏ khoảng trắng trong mặc định */
-  box-sizing: border-box;  /* Đảm bảo padding không làm tăng kích thước khung */
+  margin: 0;                /* Xóa khoảng trắng ngoài mặc định */
+  padding: 0;               /* Xóa khoảng trắng trong mặc định */
+  box-sizing: border-box;  /* Tính cả padding & border vào kích thước */
 }
 
-/* Toàn bộ phần thân trang */
+/* ----- TOÀN BỘ TRANG BODY ----- */
 body {
-  height: 100vh; /* Chiều cao = 100% màn hình hiển thị */
-  display: flex; /* Dùng Flexbox để căn giữa nội dung */
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center;     /* Căn giữa theo chiều dọc */
+  height: 100vh;            /* Chiều cao 100% toàn màn hình */
+  display: flex;            /* Sử dụng Flexbox để căn giữa */
+  justify-content: center;  /* Căn giữa ngang */
+  align-items: center;      /* Căn giữa dọc */
   
-  /* Ảnh nền */
+  /* Hình nền lớn */
   background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') 
               no-repeat center center fixed;
-  background-size: cover; /* Ảnh nền bao phủ toàn bộ màn hình */
+  background-size: cover;   /* Phủ kín toàn bộ màn hình */
 
-  font-family: Arial, sans-serif; /* Kiểu chữ chính */
+  font-family: Arial, sans-serif; /* Phông chữ dùng chung */
 }
 
-/* Khung đăng nhập */
+/* ----- HỘP ĐĂNG NHẬP CHÍNH ----- */
 .login-box {
   width: 320px;                     /* Chiều rộng khung */
   padding: 40px;                    /* Khoảng cách bên trong */
-  background: rgba(0, 0, 0, 0.8);   /* Nền đen trong suốt 80% */
-  color: #fff;                      /* Màu chữ trắng */
+  background: rgba(0, 0, 0, 0.8);   /* Nền đen mờ (opacity 80%) */
+  color: #fff;                      /* Chữ trắng */
   border-radius: 10px;              /* Bo tròn góc */
-  box-shadow: 0 0 20px #000;        /* Đổ bóng đen xung quanh */
+  box-shadow: 0 0 20px #000;        /* Đổ bóng đen nhẹ */
+  text-align: center;               /* Căn giữa nội dung trong khung */
 }
 
-/* Tiêu đề trong khung */
+/* ----- TIÊU ĐỀ TRONG KHUNG ----- */
 .login-box h2 {
   margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
 }
 
-/* Ô nhập liệu */
+/* ----- Ô NHẬP DỮ LIỆU ----- */
 .login-box input {
-  width: 100%;          /* Rộng bằng khung cha */
-  padding: 10px;        /* Đệm trong ô nhập */
-  margin: 10px 0;       /* Khoảng cách trên và dưới */
+  width: 100%;          /* Chiều rộng bằng khung cha */
+  padding: 10px;        /* Đệm trong ô */
+  margin: 10px 0;       /* Cách đều trên dưới */
   border: none;         /* Không viền */
-  border-radius: 5px;   /* Bo tròn nhẹ góc ô */
+  border-radius: 5px;   /* Bo tròn nhẹ */
 }
 
-/* Nút bấm đăng nhập */
+/* ----- NÚT ĐĂNG NHẬP ----- */
 .login-box button {
-  width: 100%;             /* Rộng bằng khung */
-  padding: 10px;           /* Đệm trong nút */
-  border: none;            /* Không viền */
-  background: #00bfff;     /* Màu xanh dương tươi */
-  color: white;            /* Chữ trắng */
-  border-radius: 5px;      /* Bo tròn góc */
-  cursor: pointer;         /* Biến con trỏ chuột thành bàn tay khi hover */
+  width: 100%;              /* Rộng toàn phần */
+  padding: 10px;
+  border: none;
+  background: #00bfff;      /* Xanh dương tươi */
+  color: white;             /* Chữ trắng */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;        /* Chữ đậm */
+  transition: background 0.3s ease; /* Hiệu ứng hover mượt mà */
+}
+
+.login-box button:hover {
+  background: #009acd;      /* Màu khi di chuột qua */
 }
