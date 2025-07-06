@@ -1,84 +1,65 @@
-/* Áp dụng cho toàn bộ trang */
+/* 🌐 Font chữ và bố cục trang */
 body {
-  font-family: Arial, sans-serif;   /* Font chữ toàn trang */
+  font-family: Arial, sans-serif;   /* Font chữ chính */
   background-color: white;          /* Nền mặc định màu trắng */
-  padding: 20px;                    /* Khoảng cách viền trong body */
+  color: black;                     /* Màu chữ mặc định */
+  padding: 20px;                    /* Khoảng cách viền bên trong */
 }
 
-/* Căn giữa toàn bộ nội dung có class 'toan-bo-giua' */
-.toan-bo-giua {
-  text-align: center;               /* Căn giữa nội dung bên trong */
-}
-
-/* Khi bật chế độ nền tối (class 'dark' được gắn vào <body>) */
+/* 🌓 Giao diện nền tối (khi bật chế độ dark mode) */
 body.dark {
-  background: #111;                 /* Đổi nền sang màu đen đậm */
+  background: #111;                 /* Nền tối */
   color: white;                     /* Chữ trắng để dễ nhìn */
 }
 
-/* Bảng dữ liệu */
-table {
-  border-collapse: collapse;        /* Gộp viền lại sát nhau */
-  width: 300px;                     /* Rộng cố định 300px */
-  margin-bottom: 20px;              /* Cách phần dưới 20px */
+/* 📦 Căn giữa nội dung */
+.toan-bo-giua {
+  text-align: center;               /* Căn giữa nội dung khối */
 }
 
-/* Ô trong bảng (cả thẻ th và td) */
+/* 📊 Bảng dữ liệu */
+table {
+  border-collapse: collapse;        /* Gộp các đường viền ô lại */
+  width: 300px;                     /* Chiều rộng bảng */
+  margin-bottom: 20px;              /* Cách phần dưới một khoảng */
+  border-radius: 5px;               /* Bo tròn góc bảng */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+  overflow: hidden;                 /* Ẩn phần tràn khi bo góc */
+}
+
+/* 📋 Ô trong bảng (tiêu đề và nội dung) */
 th, td {
   border: 1px solid #b93838;        /* Viền đỏ sẫm */
-  padding: 5px;                     /* Đệm trong ô */
-  text-align: center;               /* Căn giữa nội dung ô */
+  padding: 5px;                     /* Khoảng cách bên trong ô */
+  text-align: center;               /* Căn giữa chữ */
+  background-color: #fffaf7;        /* Nền trắng ngà */
 }
 
-/* Nút chung */
+/* 🔘 Nút chức năng */
 button {
-  padding: 10px;                    /* Đệm trong nút */
-  background-color: green;          /* Nền màu xanh lá */
-  color: white;                     /* Chữ trắng */
+  padding: 10px;                    /* Khoảng cách trong nút */
+  background-color: green;          /* Màu nền xanh lá */
+  color: white;                     /* Màu chữ trắng */
   border: none;                     /* Không viền */
-  cursor: pointer;                  /* Con trỏ thành bàn tay khi rê chuột */
+  cursor: pointer;                  /* Con trỏ bàn tay khi hover */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
 }
 
-/* Nút khi hover */
+/* 🔘 Khi rê chuột vào nút */
 button:hover {
-  background-color: darkgreen;      /* Đổi sang xanh đậm khi rê chuột */
+  background-color: darkgreen;      /* Đổi sang màu xanh đậm */
 }
 
-/* Khối DIV nổi bật (dùng trong phần 'hop-div') */
+/* 🧱 Khối nổi bật (div đặc biệt) */
 .hop-div {
-  background-color: lightblue;      /* Nền màu xanh nhạt */
-  padding: 10px;                    /* Đệm bên trong */
-  margin-top: 10px;                 /* Cách phía trên */
+  background-color: lightblue;      /* Màu nền xanh nhạt */
+  padding: 10px;                    /* Khoảng cách trong */
+  margin-top: 10px;                 /* Cách phần trên */
+  border-radius: 6px;               /* Bo tròn góc nhẹ */
 }
 
-/* Dùng cho chữ nổi bật bằng <span class="highlight"> */
+/* 🔺 Chữ nổi bật (dùng với span.highlight) */
 .highlight {
-  color: red;                       /* Chữ màu đỏ */
-  font-weight: bold;               /* Đậm chữ */
-}
-
-/* Làm nút chuyển màu mượt mà hơn khi hover */
-button {
-  padding: 10px;
-  background-color: green;
-  color: white;
-  border: none;
-  cursor: pointer;
-
-  transition: background-color 0.3s ease; /* Chuyển màu mượt trong 0.3 giây */
-}
-
-button:hover {
-  background-color: darkgreen; /* Khi rê chuột vào, đổi sang màu xanh đậm */
-}
-
-/* Bảng dữ liệu thêm bóng và bo góc */
-table {
-  border-collapse: collapse;         /* Gộp viền ô lại */
-  width: 300px;
-  margin-bottom: 20px;
-
-  border-radius: 5px;                /* Bo tròn góc bảng */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
-  overflow: hidden;                  /* Ẩn tràn nếu bo góc */
+  color: red;                       /* Màu đỏ */
+  font-weight: bold;                /* Chữ đậm */
 }
