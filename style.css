@@ -1,46 +1,56 @@
+/* Áp dụng cho tất cả phần tử trong trang */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;                /* Bỏ khoảng trắng mặc định ngoài */
+  padding: 0;               /* Bỏ khoảng trắng trong mặc định */
+  box-sizing: border-box;  /* Đảm bảo padding không làm tăng kích thước khung */
 }
 
+/* Toàn bộ phần thân trang */
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') no-repeat center center fixed;
-  background-size: cover;
-  font-family: Arial, sans-serif;
+  height: 100vh; /* Chiều cao = 100% màn hình hiển thị */
+  display: flex; /* Dùng Flexbox để căn giữa nội dung */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;     /* Căn giữa theo chiều dọc */
+  
+  /* Ảnh nền */
+  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') 
+              no-repeat center center fixed;
+  background-size: cover; /* Ảnh nền bao phủ toàn bộ màn hình */
+
+  font-family: Arial, sans-serif; /* Kiểu chữ chính */
 }
 
+/* Khung đăng nhập */
 .login-box {
-  width: 320px;
-  padding: 40px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000;
+  width: 320px;                     /* Chiều rộng khung */
+  padding: 40px;                    /* Khoảng cách bên trong */
+  background: rgba(0, 0, 0, 0.8);   /* Nền đen trong suốt 80% */
+  color: #fff;                      /* Màu chữ trắng */
+  border-radius: 10px;              /* Bo tròn góc */
+  box-shadow: 0 0 20px #000;        /* Đổ bóng đen xung quanh */
 }
 
+/* Tiêu đề trong khung */
 .login-box h2 {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
 }
 
+/* Ô nhập liệu */
 .login-box input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
+  width: 100%;          /* Rộng bằng khung cha */
+  padding: 10px;        /* Đệm trong ô nhập */
+  margin: 10px 0;       /* Khoảng cách trên và dưới */
+  border: none;         /* Không viền */
+  border-radius: 5px;   /* Bo tròn nhẹ góc ô */
 }
 
+/* Nút bấm đăng nhập */
 .login-box button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background: #00bfff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  width: 100%;             /* Rộng bằng khung */
+  padding: 10px;           /* Đệm trong nút */
+  border: none;            /* Không viền */
+  background: #00bfff;     /* Màu xanh dương tươi */
+  color: white;            /* Chữ trắng */
+  border-radius: 5px;      /* Bo tròn góc */
+  cursor: pointer;         /* Biến con trỏ chuột thành bàn tay khi hover */
 }
