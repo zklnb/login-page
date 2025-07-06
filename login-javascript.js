@@ -7,7 +7,7 @@ function login() {
   // Kiểm tra tên đăng nhập và mật khẩu đúng không
   if (username === "zklnb" && password === "1234") {
     // ✅ Nếu đúng -> chuyển đến trang chính nằm trong thư mục /home/
-    window.location.href = "home/index.html";
+   window.location.href = "https://zklnb.github.io/xzklnb/";
   } else {
     // ❌ Nếu sai -> hiển thị thông báo lỗi
     alert("Sai tài khoản hoặc mật khẩu!");
