@@ -1,54 +1,47 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') no-repeat center center fixed;
-  background-size: cover;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
 
-  /* 🔽 Thêm đoạn này để căn giữa khung */
+body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
 }
 
 .login-box {
-  width: 300px;
+  width: 320px;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px #000;
-  text-align: center;
 }
 
-
 .login-box h2 {
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .login-box input {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  background: #333;
   border: none;
-  color: #fff;
   border-radius: 5px;
 }
 
 .login-box button {
   width: 100%;
   padding: 10px;
-  background: #00c3ff;
   border: none;
+  background: #00bfff;
   color: white;
-  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.login-box button:hover {
-  background: #0099cc;
-}
