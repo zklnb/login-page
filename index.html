@@ -1,50 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>OPM</title> <!-- Tiêu đề hiển thị trên tab trình duyệt -->
-  <link rel="stylesheet" href="style.css" /> <!-- Kết nối tới file style.css để áp dụng CSS -->
+  <meta charset="UTF-8"> <!-- Hỗ trợ hiển thị tiếng Việt -->
+  <title>Đăng Nhập - ZKLNB</title> <!-- Tiêu đề tab trình duyệt -->
+
+  <!-- Kết nối tới file CSS giao diện -->
+  <link rel="stylesheet" href="login-style.css">
 </head>
 <body>
 
-  <!-- Khung đăng nhập chính -->
+  <!-- Hộp đăng nhập chính -->
   <div class="login-box">
-    <h2>Đăng Nhập</h2> <!-- Tiêu đề trong khung đăng nhập -->
+    <!-- Ảnh đại diện -->
+    <img 
+      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+      alt="Avatar" 
+      style="width: 80px; border-radius: 50%; margin-bottom: 20px;"
+    >
 
-    <!-- Biểu mẫu đăng nhập, khi nhấn submit sẽ chạy hàm login() -->
+    <h2>Đăng Nhập</h2>
+
+    <!-- Biểu mẫu đăng nhập -->
     <form onsubmit="return login()">
-
-      <!-- Ô nhập tên đăng nhập, bắt buộc điền -->
-      <input type="text" id="username" placeholder="Tên đăng nhập" required />
-
-      <!-- Ô nhập mật khẩu, bắt buộc điền -->
-      <input type="password" id="password" placeholder="Mật khẩu" required />
-
-      <!-- Nút đăng nhập -->
+      <input type="text" id="username" placeholder="Tên đăng nhập" required>
+      <input type="password" id="password" placeholder="Mật khẩu" required>
       <button type="submit">Đăng nhập</button>
     </form>
   </div>
 
-  <!-- PHẦN XỬ LÝ JAVASCRIPT -->
-  <script>
-    function login() {
-      // Lấy giá trị người dùng đã nhập ở ô username
-      const u = document.getElementById('username').value;
-
-      // Lấy giá trị ở ô password
-      const p = document.getElementById('password').value;
-
-      // Kiểm tra tài khoản và mật khẩu có đúng không
-      if (u === "zklnb" && p === "1234") {
-        // Nếu đúng, chuyển hướng đến trang chính
-        window.location.href = "https://zklnb.github.io/";
-      } else {
-        // Nếu sai, hiển thị thông báo lỗi
-        alert("Sai tài khoản hoặc mật khẩu!");
-      }
-
-      return false; // Ngăn không cho trang reload lại sau khi submit
-    }
-  </script>
+  <!-- File JS xử lý đăng nhập -->
+  <script src="login-script.js"></script>
 
 </body>
 </html>
